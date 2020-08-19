@@ -9,6 +9,7 @@
 #import "YMThemeManager.h"
 #import "YMDeviceHelper.h"
 #import "TKWeChatPluginConfig.h"
+#import "NSWindow+fuzzy.h"
 
 static const NSString *DEVICE_FINGERPRINT = @"DEVICE_FINGERPRINT";
 static const NSString *DEVICE_THEME_MODE = @"DEVICE_THEME_MODE";
@@ -135,4 +136,43 @@ static const NSString *DEVICE_THEME_MODE = @"DEVICE_THEME_MODE";
     button.attributedTitle = returnValue;
 }
 
+#pragma mark - EffectView
++ (NSVisualEffectView *)creatFuzzyEffectView:(id)superView
+{
+    if (!TKWeChatPluginConfig.sharedConfig.fuzzyMode) {
+        return nil;
+    }
+    
+    if (!superView) {
+        return nil;
+    }
+    
+    NSVisualEffectView *effectView = [[NSVisualEffectView alloc] init];
+    effectView.blendingMode = NSVisualEffectBlendingModeBehindWindow;
+    if (@available(macOS 10.11, *)) {
+        effectView.material = NSVisualEffectMaterialDark;
+    } else {
+        // Fallback on earlier versions
+    }
+    effectView.state = NSVisualEffectStateActive;
+    return effectView;
+}
+
++ (void)changeEffectViewMode:(NSVisualEffectView *)effectView
+{
+    if (!TKWeChatPluginConfig.sharedConfig.fuzzyMode) {
+        return;
+    }
+    
+    if (!effectView) {
+        return ;
+    }
+    effectView.blendingMode = NSVisualEffectBlendingModeBehindWindow;
+    if (@available(macOS 10.11, *)) {
+        effectView.material = NSVisualEffectMaterialDark;
+    } else {
+        // Fallback on earlier versions
+    }
+    effectView.state = NSVisualEffectStateActive;
+}
 @end

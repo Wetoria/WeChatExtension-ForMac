@@ -1,9 +1,9 @@
 
 <p align="center">
-<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/face.png" width="1000px"/>
+<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/face1.png" width="1000px"/>
 </p>
 
-![platform](https://img.shields.io/badge/platform-macos-lightgrey.svg)  [![release](https://img.shields.io/badge/release-v2.6.1-brightgreen.svg)](https://github.com/MustangYM/WeChatExtension-ForMac/releases)  ![support](https://img.shields.io/badge/support-wechat%202.4.0-blue.svg)
+![platform](https://img.shields.io/badge/platform-macos-lightgrey.svg)  [![release](https://img.shields.io/badge/release-v2.6.4-brightgreen.svg)](https://github.com/MustangYM/WeChatExtension-ForMac/releases)  ![support](https://img.shields.io/badge/support-wechat%202.4.2-blue.svg)
 
 - 支持[企业微信](https://github.com/MustangYM/WeChatICU-ForMac)，由此进。
 - 如果你希望更简约，这里提供了[简版小助手](https://github.com/MustangYM/WeChatSeptet-ForMac)，安装方式与WeChatExtension的手动安装方式一样。
@@ -12,30 +12,38 @@
 
 - 适用于Mac版的WeChat拓展功能。1.7.5代码来自于[WeChatPlugin](https://github.com/TKkk-iOSer/WeChatPlugin-MacOS)，对[TK](https://github.com/TKkk-iOSer)在此表示感谢！
 - Issues注意事项[Wiki](https://github.com/MustangYM/WeChatExtension-ForMac/wiki/Issues%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)。
-- 到目前为止，并未发现因使用本插件会导致封号。但`开启`本插件的`Alfred`功能存在有被攻击的`风险`，[腾讯安全玄武实验室所披露的漏洞](https://xlab.tencent.com/cn/2018/10/23/weixin-cheater-risks/)。
+- 到目前为止，并未发现因使用本插件会导致封号。
 
 ## 最新支持版本
--  mac版微信2.4.0.149
+-  mac版微信2.4.2
 -  微信2.4.0版本以上才支持小程序 [去下载](https://developers.weixin.qq.com/community/develop/doc/0000a0544fcfc013c8b9d164a5b801)
 
-## 黑夜/深邃/少女 模式
+## 迷离/黑夜/深邃/少女 模式
 - 众多软件都适配了黑夜模式，等了这么久Mac微信官方还是没做适配，所以做了这个玩票功能。
 - 少量细节没有做适配，不影响正常使用，如果你是强迫症加完美主义，`主题模式-黑夜模式-再次点击`可以`关掉`这个功能。
-- 在黑夜模式中你可以打开`群成员彩色`，群聊中每个发言人的昵称颜色都会有所区别。
+<del>- 在黑夜模式中你可以打开`群成员彩色`，群聊中每个发言人的昵称颜色都会有所区别。<del>
 
-- 黑夜模式
+- 迷离模式👇 `It‘s perfect！ I love it！`
 <p align="center">
-<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/darkMode.png" width="800px"/>
+<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/fuzzyMode1.png" width="1500px"/>
+</p>
+<p align="center">
+<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/fuzzyMode.png" width="1500px"/>
 </p>
 
-- 深邃模式
+- 黑夜模式👇
 <p align="center">
-<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/blackMode.png" width="800px"/>
+<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/darkMode.png" width="1500px"/>
 </p>
 
-- 少女粉模式
+- 深邃模式👇
 <p align="center">
-<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/pinkMode.png" width="800px"/>
+<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/blackMode.png" width="1500px"/>
+</p>
+
+- 少女粉模式👇
+<p align="center">
+<img src="https://github.com/MustangYM/WeChatExtensionSources/blob/master/Pictures/pinkMode.png" width="1500px"/>
 </p>
 
 - 模式切换
@@ -176,6 +184,9 @@ sudo rm -r -f WeChatExtension-ForMac && git clone --depth=1 https://github.com/M
 
 ## 更新日志
 ```
+2020-08-13 聊天输入框/表情选择/收藏界面图标优化，修复联系人列表/详情页面若干BUG。
+2020-07-27 修复免认证登录后, 主页面一片空白。修复部分机器会话标题显示不全。适配10.13低版本系统聊天框底部图标不显示。
+2020-07-21 新增“迷离模式”主题。
 2020-07-13 消息自动转发，移除退群监控，界面优化。
 2020-06-30 修复内存泄露导致的越用越卡顿，修复打字卡顿。
 2020-06-11 下架僵尸粉检测功能，修复聊天记录不完整BUG。
